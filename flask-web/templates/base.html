@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{title}}</title>
+    <style>
+      nav {
+        background-color: #f2f2f2;
+        padding: 10px;
+      }
+      nav a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: black;
+      }
+      .container {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/templates/multiplication.html">구구단</a>
+      <a href="/templates/calculator.html">계산기</a>
+    </nav>
+    <div class="container">{% block content %}{% endblock %}</div>
+  </body>
+</html>

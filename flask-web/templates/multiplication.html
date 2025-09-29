@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+<h2>구구단</h2>
+<form action="/templates/multiplication.html" method="post">
+  <label for="number">숫자를 입력하세요:</label>
+  <input type="number" id="number" name="number" required />
+  <button type="submit">구구단 계산</button>
+</form>
+{% if gugu_list %}
+<h3>{{number}}단</h3>
+<ul>
+  {% for item in gugu_list %}
+  <li>{{item}}</li>
+  {% endfor %}
+</ul>
+{% endif %} {% endblock %}
